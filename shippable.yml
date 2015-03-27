@@ -9,9 +9,14 @@ node_js:
 env:
   - XUNIT_FILE=shippable/testresults/result.xml
 
+# Add for testing npm
+before_install:
+  - npm cache clean
+  - curl -L https://www.npmjs.org/install.sh | sh
+  - npm -v
+
 # Create directories for test and coverage reports
 before_script:
-  - npm -v
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
 
