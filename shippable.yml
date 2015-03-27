@@ -12,7 +12,6 @@ env:
 # Add for testing npm
 before_install:
   - npm -v
-  - npm install -g npm@latest
   - npm -v
 
 # Create directories for test and coverage reports
