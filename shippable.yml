@@ -3,17 +3,18 @@ language: node_js
 
 # Version number
 node_js:
-  - 0.8
+#  - 0.8
+  - 0.10
 
 # The path for Xunit to output test reports
 env:
   - XUNIT_FILE=shippable/testresults/result.xml
 
 # Add for testing npm
-before_install:
-  - npm -v
-  - npm install -g npm@~1.4.6
-  - npm -v
+# before_install:
+#  - npm -v
+#  - npm install -g npm@~1.4.6
+#  - npm -v
 
 # Create directories for test and coverage reports
 before_script:
