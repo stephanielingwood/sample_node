@@ -12,6 +12,7 @@ env:
 # Add for testing npm
 before_install:
   - npm -v
+  - npm install -g npm@~1.4.6
   - npm -v
 
 # Create directories for test and coverage reports
