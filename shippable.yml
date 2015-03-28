@@ -4,7 +4,7 @@ language: node_js
 # Version number
 node_js:
   - 0.8
-#  - 0.10
+  - 0.10
 
 # The path for Xunit to output test reports
 env:
@@ -13,7 +13,7 @@ env:
 # Add for testing npm
 before_install:
   - npm -v
-  - npm install -g npm@~1.4.6
+  - if [[ $SHIPPABLE_NODE_VERSION =~ [0].[6-8] ]]; then npm install -g npm@~1.4.6
   - npm -v
 
 # Create directories for test and coverage reports
