@@ -14,7 +14,6 @@ env:
 # Add for testing npm
 before_install:
   - npm -v
-  - if [[ $SHIPPABLE_NODE_VERSION = 0.6 ]]; then npm config set ca=""; fi
   - if [[ $SHIPPABLE_NODE_VERSION =~ [0].[6-8] ]]; then npm install -g npm@~1.4.6; fi
   - npm -v
 
