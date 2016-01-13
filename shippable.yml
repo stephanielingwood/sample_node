@@ -29,21 +29,6 @@ build:
     - ps -eax
     - ls -al
 
-  post_ci:
-    - docker push avinci/sample_node
 
 integrations:
-  notification:
-    - integrationName: slk-avi
-      type: slack
-      recepients:
-        - prod
-      branches:
-        only:
-          - master
-  hub:
-    - integrationName: dock-avi
-      type: docker
-      branches:
-        only:
-          - master
+
