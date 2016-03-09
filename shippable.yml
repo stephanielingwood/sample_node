@@ -10,7 +10,6 @@ build:
     pull: true
   cache: true
   ci:
-    - source ~/.nvm/nvm.sh && nvm install $SHIPPABLE_NODE_VERSION
     - node --version
     - npm install
     - npm install mocha-junit-reporter
