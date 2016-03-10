@@ -1,32 +1,25 @@
+# Build Environment
+build_environment: Windows
+
 # Language setting
 language: node_js
 
 # Version number
 node_js:
-  - 0.6
-  - 0.8
   - 0.10
 
 # The path for Xunit to output test reports
 env:
-  - XUNIT_FILE=shippable/testresults/result.xml
+  global:
+    - NODE_ENV=dev
+    - XUNIT_FILE=shippable/testresults/result.xml
 
 # Add for testing npm
 before_install:
   - npm -v
-  - if [[ $SHIPPABLE_NODE_VERSION =~ [0].[6-8] ]]; then npm install -g npm@~1.4.6; fi
-  - npm -v
-
-# Create directories for test and coverage reports
-before_script:
-  - mkdir -p shippable/testresults
-  - mkdir -p shippable/codecoverage
+  - echo $NODE_PATH
 
 # Running the tests with grunt
 script:
   - grunt
 
-# Tell istanbul to generate a coverage report
-after_script:
-  - ./node_modules/.bin/istanbul cover grunt -- -u tdd
-  - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
