@@ -16,6 +16,8 @@ env:
 
 # Add for testing npm
 before_install:
+  - sudo apt-get install g++
+  - g++ --version
   - npm -v
   - echo $NODE_PATH
 
