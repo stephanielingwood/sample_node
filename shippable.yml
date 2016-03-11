@@ -16,8 +16,10 @@ env:
 
 # Add for testing npm
 before_install:
-  - sudo apt-get install g++
-  - g++ --version
+  - sudo apt-get install tree
+  - echo $SHIPPABLE_BUILD_DIR
+  - cd $SHIPPABLE_BUILD_DIR
+  - tree
   - npm -v
   - echo $NODE_PATH
 
