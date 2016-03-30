@@ -9,7 +9,7 @@ build:
     - which ruby
     - which rvm
     - ruby --version
-    - rvm --help
+    - rvm --version
     - node --version
     - npm install
     - npm update
