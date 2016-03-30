@@ -4,18 +4,15 @@ node_js:
   - "0.10"
 
 build:
-  pre_ci_boot:
-    image_name: shippable/minv2
-    image_tag: latest
-    pull: true
-  cache: true
   ci:
+    - source /usr/local/rvm/scripts/rvm
+    - which ruby
+    - which rvm
+    - ruby --version
+    - rvm --help
     - node --version
     - npm install
-    - npm install mocha-junit-reporter
     - npm update
-    - which sudo
-    - shippable_cache_container
     - echo "do tests now"
   on_success:
     - echo "yay! success"
