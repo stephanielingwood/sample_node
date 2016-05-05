@@ -19,4 +19,4 @@ build:
     - grunt
     - ./node_modules/.bin/istanbul cover grunt -- -u tdd
     - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
-    # - cd idonotexist
+    - cd idonotexist
