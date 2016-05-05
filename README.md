@@ -8,7 +8,7 @@ Uses Grunt to run tests against an Express server, then generates reports with X
 This sample is built for Shippable, a docker based continuous integration and deployment platform.
 
 Build status:
-[![Run Status](https://apibeta.shippable.com/projects/564e6fb2d78fc6fc59652b5a/badge?branch=force-failure)](https://beta.shippable.com/projects/564e6fb2d78fc6fc59652b5a)
+[![Run Status](https://api.shippable.com/projects/5515b2165ab6cc1352ad78c0/badge?branch=force-failure2)](https://app.shippable.com/projects/5515b2165ab6cc1352ad78c0)
 
 Coverage status:
-[![Coverage Badge](https://apibeta.shippable.com/projects/564e6fb2d78fc6fc59652b5a/coverageBadge?branch=force-failure)](https://beta.shippable.com/projects/564e6fb2d78fc6fc59652b5a)
+[![Coverage Badge](https://api.shippable.com/projects/5515b2165ab6cc1352ad78c0/coverageBadge?branch=force-failure2)](https://app.shippable.com/projects/5515b2165ab6cc1352ad78c0)
