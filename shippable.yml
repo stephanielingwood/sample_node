@@ -5,6 +5,8 @@ build_image: drydock/u12nod:prod
 
 # Version number
 node_js:
+  - 0.8
+  - 0.10
   - 0.12
 
 # The path for Xunit to output test reports
