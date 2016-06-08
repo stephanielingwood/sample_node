@@ -11,6 +11,10 @@ env:
   - XUNIT_FILE=shippable/testresults/result.xml
   - MY_VAR=string
   - MY_VAR2=string
+  
+matrix:
+  include:
+    env: MY_VAR=string
 
 install:
   - source ~/.nvm/nvm.sh && nvm install 0.12
