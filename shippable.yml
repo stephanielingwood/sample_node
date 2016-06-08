@@ -12,6 +12,7 @@ node_js:
 # The path for Xunit to output test reports
 env:
   - XUNIT_FILE=shippable/testresults/result.xml
+  - MY_VAR=string
 
 install:
   - source ~/.nvm/nvm.sh && nvm install 0.12
