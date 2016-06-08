@@ -4,7 +4,7 @@ language: node_js
 build_image: drydock/u12nod:prod
 
 # Version number
-node_js:
+# node_js:
 
 # The path for Xunit to output test reports
 env:
