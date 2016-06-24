@@ -12,5 +12,7 @@ build:
   ci:
     # - npm install
     # - grunt test
+    - echo $FOO
+    - echo $BAR
   on_success:
     - node myDeploymentScript.js
