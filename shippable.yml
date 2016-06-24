@@ -10,7 +10,7 @@ env:
 
 build:
   ci:
-    - npm install
-    - grunt test
+    # - npm install
+    # - grunt test
   on_success:
     - node myDeploymentScript.js
