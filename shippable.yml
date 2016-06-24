@@ -5,14 +5,12 @@ node_js:
 
 env:
   global: 
-    - FOO="foo"
-    - BAR="bar"
+    - FOO=foo
+    - BAR=bar
 
 build:
   ci:
     # - npm install
     # - grunt test
-    - echo $FOO
-    - echo $BAR
   on_success:
     - node myDeploymentScript.js
