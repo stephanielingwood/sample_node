@@ -8,8 +8,8 @@ build:
     - which python
     - python --version
     - ls -la /usr/bin | grep python
-    - python3.4
-    - python --version
+    - ls -la ~/ | grep nvm
+    - nvm --help
     - node --version
     - npm install
     - npm update
