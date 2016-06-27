@@ -1,15 +1,12 @@
 language: node_js
 
 node_js:
-  - "0.10"
+  - "0.12"
 
 build:
   ci:
-    - source /usr/local/rvm/scripts/rvm
-    - which ruby
-    - which rvm
-    - ruby --version
-    - rvm --version
+    - which python
+    - python --version
     - node --version
     - npm install
     - npm update
