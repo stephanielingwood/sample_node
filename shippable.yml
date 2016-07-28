@@ -8,7 +8,7 @@ node_js:
 env:
   global:
     - FOO=FUBU
-    - FO1=BUBU
+    - WOO=WUWU
     - BOO=GUBU
 
   matrix:
