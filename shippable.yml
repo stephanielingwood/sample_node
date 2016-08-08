@@ -5,6 +5,9 @@ language: node_js
 node_js:
   - 0.12
 
+jdk:
+  - oraclejdk8
+
 # The path for Xunit to output test reports
 env:
   - XUNIT_FILE=shippable/testresults/result.xml
@@ -14,6 +17,8 @@ build:
   # - source ~/.nvm/nvm.sh && nvm install 0.12
     - node --version
     - npm install
+    - java -version
+    - dpkg --list | grep -i jdk
 #  - . installMongo.sh
 #  - cat /etc/mongod.conf
 #  - sudo mongod --smallfiles &
