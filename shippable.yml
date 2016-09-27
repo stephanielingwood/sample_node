@@ -14,3 +14,4 @@ build:
     # - grunt test
   on_success:
     - node myDeploymentScript.js
+
