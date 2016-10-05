@@ -13,9 +13,9 @@ node_js:
 #  - iojs 2.0
 #  - iojs 3.3.1
 
- services:
+services:
 #  - cassandra
-  
+  - couchdb
 
 build:
   pre_ci_boot:
