@@ -13,24 +13,32 @@ node_js:
 #  - iojs 2.0
 #  - iojs 3.3.1
 
-# services:
+ services:
 #  - cassandra
+  
 
 build:
   pre_ci_boot:
     image_name: drydock/u14nodall
     image_tag: tip
-    pull: true
+    pull: false
   ci: 
     - node --version
 #    - npm install
-    - java -version
+
+#    Cassandra
 #    - sudo service cassandra status
-    - sudo service cassandra start
-    - sudo service cassandra status
-    - sudo nodetool status
-#    - cqlsh
-    
+#    - sudo service cassandra start
+#    - sudo service cassandra status
+#    - sudo nodetool status
+#    - cqlsh - this will start interactive shell; need to figure out how to get back out of it
+
+#    CouchDB
+    - curl http://127.0.0.1:5984
+    - curl -X PUT http://127.0.0.1:5984/demo
+    - curl -X GET http://127.0.0.1:5984/demo
+    - "curl -H 'Content-Type: application/json' -X POST http://127.0.0.1:5984/demo -d '{\"company\": \"Example, Inc.\"}'"
+    - curl -X GET http://127.0.0.1:5984/demo
     
 #  - . installMongo.sh
 #  - cat /etc/mongod.conf
