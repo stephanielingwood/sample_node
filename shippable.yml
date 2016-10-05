@@ -3,17 +3,29 @@ language: node_js
 
 # Version number
 node_js:
+#  - 0.10
   - 0.12
+#  - 4.2.3
+#  - 4.6.0
+#  - 5.12
+#  - 6.7.0
+#  - iojs 1.0
+#  - iojs 2.0
+#  - iojs 3.3.1
 
-# The path for Xunit to output test reports
-env:
-  - XUNIT_FILE=shippable/testresults/result.xml
+services:
+  - cassandra
 
 build:
   ci: 
-  # - source ~/.nvm/nvm.sh && nvm install 0.12
     - node --version
-    - npm install
+#    - npm install
+    - java -version
+    - sudo service cassandra status
+    - sudo nodetool status
+#    - cqlsh
+    
+    
 #  - . installMongo.sh
 #  - cat /etc/mongod.conf
 #  - sudo mongod --smallfiles &
@@ -21,13 +33,13 @@ build:
 #  - mongo --eval 'db.collection.find()'
 
     # Create directories for test and coverage reports
-    - mkdir -p shippable/testresults
-    - mkdir -p shippable/codecoverage
+#    - mkdir -p shippable/testresults
+#    - mkdir -p shippable/codecoverage
 
     # Running the tests with grunt
-    - grunt
+#    - grunt
 
     # Tell istanbul to generate a coverage report
-    - ./node_modules/.bin/istanbul cover grunt -- -u tdd
-    - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
+#    - ./node_modules/.bin/istanbul cover grunt -- -u tdd
+#    - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
   
