@@ -19,7 +19,8 @@
   "dependencies": {
     "express": "^4.2.0",
     "nano": "^5.10.0",
-    "should": "^4.0.1"
+    "should": "^4.0.1",
+    "memjs": "^0.10.0"
   },
   "devDependencies": {
     "chai": "^1.9.1",
