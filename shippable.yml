@@ -19,12 +19,16 @@ services:
 #  - elasticsearch
   - memcached
 
+# The path for Xunit to output test reports
+env:
+  - XUNIT_FILE=shippable/testresults/result.xml
+
 build:
   pre_ci_boot:
     image_name: drydock/u14nodall
     image_tag: tip
     pull: false
-  ci: 
+  ci:
     - node --version
 #    - npm install
 
@@ -41,12 +45,13 @@ build:
 #    - curl -X GET http://127.0.0.1:5984/demo
 #    - "curl -H 'Content-Type: application/json' -X POST http://127.0.0.1:5984/demo -d '{\"company\": \"Example, Inc.\"}'"
 #    - curl -X GET http://127.0.0.1:5984/demo
- 
+
 #    elasticsearch
 #    - will need to write a script: https://www.compose.com/articles/getting-started-with-elasticsearch-and-node/
 
 #    memcached
- 
+    - grunt
+
 #  - . installMongo.sh
 #  - cat /etc/mongod.conf
 #  - sudo mongod --smallfiles &
@@ -57,10 +62,8 @@ build:
 #    - mkdir -p shippable/testresults
 #    - mkdir -p shippable/codecoverage
 
-    # Running the tests with grunt
-#    - grunt
 
     # Tell istanbul to generate a coverage report
 #    - ./node_modules/.bin/istanbul cover grunt -- -u tdd
 #    - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
-  
+
