@@ -30,7 +30,7 @@ build:
     pull: false
   ci:
     - node --version
-#    - npm install
+    - npm install
 
 #    Cassandra
 #    - sudo service cassandra status
