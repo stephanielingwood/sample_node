@@ -15,7 +15,8 @@ node_js:
 
 services:
 #  - cassandra
-  - couchdb
+#  - couchdb
+  - elasticsearch
 
 build:
   pre_ci_boot:
@@ -34,12 +35,15 @@ build:
 #    - cqlsh - this will start interactive shell; need to figure out how to get back out of it
 
 #    CouchDB
-    - curl http://127.0.0.1:5984
-    - curl -X PUT http://127.0.0.1:5984/demo
-    - curl -X GET http://127.0.0.1:5984/demo
-    - "curl -H 'Content-Type: application/json' -X POST http://127.0.0.1:5984/demo -d '{\"company\": \"Example, Inc.\"}'"
-    - curl -X GET http://127.0.0.1:5984/demo
-    
+#    - curl http://127.0.0.1:5984
+#    - curl -X PUT http://127.0.0.1:5984/demo
+#    - curl -X GET http://127.0.0.1:5984/demo
+#    - "curl -H 'Content-Type: application/json' -X POST http://127.0.0.1:5984/demo -d '{\"company\": \"Example, Inc.\"}'"
+#    - curl -X GET http://127.0.0.1:5984/demo
+ 
+#    elasticsearch
+#    - 
+ 
 #  - . installMongo.sh
 #  - cat /etc/mongod.conf
 #  - sudo mongod --smallfiles &
