@@ -17,7 +17,8 @@ services:
 #  - cassandra
 #  - couchdb
 #  - elasticsearch
-  - memcached
+  - riak
+  - selenium
 
 # The path for Xunit to output test reports
 env:
