@@ -38,6 +38,7 @@ build:
 #    - sudo service cassandra status
 #    - sudo nodetool status
 #    - cqlsh - this will start interactive shell; need to figure out how to get back out of it
+#    https://www.digitalocean.com/community/tutorials/how-to-install-cassandra-and-run-a-single-node-cluster-on-ubuntu-14-04
 
 #    CouchDB
 #    - curl http://127.0.0.1:5984
