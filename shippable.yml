@@ -26,7 +26,6 @@ build:
     # Create directories for test and coverage reports
 #    - mkdir -p shippable/testresults
 #    - mkdir -p shippable/codecoverage
-
     # Running the tests with grunt
     - grunt
 
