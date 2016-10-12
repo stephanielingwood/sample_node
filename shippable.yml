@@ -28,7 +28,7 @@ build:
 #    - mkdir -p shippable/codecoverage
     # Running the tests with grunt
     - grunt
-    - cat shippable/codecoverage/notexist.js
+    - return 1
   
   post_ci:
     - ls -la shippable/codecoverage
