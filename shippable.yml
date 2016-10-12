@@ -10,6 +10,9 @@ env:
   - XUNIT_FILE=shippable/testresults/result.xml
 
 build:
+  pre_ci:
+    - mkdir -p shippable/codecoverage
+    - mkdir -p shippable/testresults
   ci: 
   # - source ~/.nvm/nvm.sh && nvm install 0.12
     - node --version
@@ -21,12 +24,13 @@ build:
 #  - mongo --eval 'db.collection.find()'
 
     # Create directories for test and coverage reports
-    - mkdir -p shippable/testresults
-    - mkdir -p shippable/codecoverage
+#    - mkdir -p shippable/testresults
+#    - mkdir -p shippable/codecoverage
 
     # Running the tests with grunt
     - grunt
 
+  post_ci:
     # Tell istanbul to generate a coverage report
     - ./node_modules/.bin/istanbul cover grunt -- -u tdd
     - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
