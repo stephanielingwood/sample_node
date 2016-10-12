@@ -28,8 +28,10 @@ build:
 #    - mkdir -p shippable/codecoverage
     # Running the tests with grunt
     - grunt
-
+    - cat shippable/codecoverage/notexist.js
+  
   post_ci:
+    - ls -la shippable/codecoverage
     # Tell istanbul to generate a coverage report
     - ./node_modules/.bin/istanbul cover grunt -- -u tdd
     - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
