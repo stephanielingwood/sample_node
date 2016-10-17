@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Shippable/sample_node",
   "dependencies": {
+    "es5-shim": "^4.5.9",
     "express": "^4.2.0",
     "nano": "^5.10.0",
     "should": "^4.0.1"
