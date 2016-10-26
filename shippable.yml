@@ -28,7 +28,6 @@ build:
 #    - mkdir -p shippable/codecoverage
     # Running the tests with grunt
     - grunt
-    - return 1
   
   post_ci:
     - ls -la shippable/codecoverage
