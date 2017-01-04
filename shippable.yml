@@ -10,6 +10,7 @@ build:
     - adduser --disabled-password --gecos '' newuser
     - chown -R newuser:newuser $SHIPPABLE_BUILD_DIR
     - cd $SHIPPABLE_BUILD_DIR
+    - cat /etc/passwd
     - ls -la ..
     - su - newuser
     - whoami
