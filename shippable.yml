@@ -3,36 +3,13 @@ language: node_js
 
 # Version number
 node_js:
-  - 0.12
-
-# The path for Xunit to output test reports
-env:
-  - XUNIT_FILE=shippable/testresults/result.xml
+  - 6.2.0
 
 build:
-  pre_ci:
-    - mkdir -p shippable/codecoverage
-    - mkdir -p shippable/testresults
   ci: 
-  # - source ~/.nvm/nvm.sh && nvm install 0.12
+    - source ~/.nvm/nvm.sh
     - node --version
-    - npm install
-    - echo $SHIPPABLE_BUILD_DIR
-#  - . installMongo.sh
-#  - cat /etc/mongod.conf
-#  - sudo mongod --smallfiles &
-#  - sleep 15
-#  - mongo --eval 'db.collection.find()'
-
-    # Create directories for test and coverage reports
-#    - mkdir -p shippable/testresults
-#    - mkdir -p shippable/codecoverage
-    # Running the tests with grunt
-    - grunt
-  
-  post_ci:
-    - ls -la shippable/codecoverage
-    # Tell istanbul to generate a coverage report
-    - ./node_modules/.bin/istanbul cover grunt -- -u tdd
-    - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
-  
+    - npm --version
+    - echo "//registry.npmjs.org/:_authToken=ABC123" > .npmrc
+    - chmod 600 .npmrc
+    - shippable_retry npm install  
