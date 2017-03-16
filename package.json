@@ -54,7 +54,6 @@
     "react-hot-loader": "*",
     "babel-preset-react": "*",
     "react-router": "*",
-    "react-select": "*",
     "enzyme": "*",
     "vue": "*",
     "reselect": "*",
