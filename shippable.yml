@@ -14,25 +14,17 @@ build:
     - mkdir -p shippable/codecoverage
     - mkdir -p shippable/testresults
   ci: 
-  # - source ~/.nvm/nvm.sh && nvm install 0.12
     - node --version
     - npm install
-    - echo $SHIPPABLE_BUILD_DIR
-#  - . installMongo.sh
-#  - cat /etc/mongod.conf
-#  - sudo mongod --smallfiles &
-#  - sleep 15
-#  - mongo --eval 'db.collection.find()'
+    - echo "check open files"
+    - lsof | wc -l
+    - echo "check number of processes"
+    - ls -1d /proc/*/task/* | wc -l
+    - echo "check free memory"
+    - free -m
+    - echo "check disk space"
+    - df -h
+    - echo "check virtual memory limit"
+    - uname -v
 
-    # Create directories for test and coverage reports
-#    - mkdir -p shippable/testresults
-#    - mkdir -p shippable/codecoverage
-    # Running the tests with grunt
-    - grunt
-  
-  post_ci:
-    - ls -la shippable/codecoverage
-    # Tell istanbul to generate a coverage report
-    - ./node_modules/.bin/istanbul cover grunt -- -u tdd
-    - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
   
