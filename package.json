@@ -43,7 +43,6 @@
     "portfinder": "^1.0.3",
     "react": "*",
     "react-redux": "*",
-    "es-plugin-react": "*",
     "classnames": "*",
     "rx-lite": "*",
     "react-dom": "*",
