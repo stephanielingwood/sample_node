@@ -15,7 +15,7 @@ build:
     - mkdir -p shippable/testresults
   ci: 
     - node --version
-    - npm install
+    - npm install --quiet >> /dev/null
     - echo "check open files"
     - lsof | wc -l
     - echo "check number of processes"
