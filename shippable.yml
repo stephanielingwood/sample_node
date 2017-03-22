@@ -13,7 +13,7 @@ build:
   # - source ~/.nvm/nvm.sh && nvm install 0.12
     - node --version
     - python --version
-    - python print_non_utf8.py
+  #  - python print_non_utf8.py
     - npm install
     - echo $SHIPPABLE_BUILD_DIR
     - cat ulysses.txt
