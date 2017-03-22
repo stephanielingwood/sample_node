@@ -14,6 +14,7 @@ build:
     - node --version
     - python --version
     - npm install
+    - echo "test of non-valid character \xe9 latin-encoded"
     - echo $SHIPPABLE_BUILD_DIR
     - cat ulysses.txt
     - echo "I made it!"
