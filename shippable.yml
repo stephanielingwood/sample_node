@@ -14,7 +14,7 @@ build:
   - export PATH=$PATH:node_modules/.bin
   - npm install --loglevel=error
   - mkdir -p shippable/testresults
-  - broccoli-clext build dist --environment=test --once
+#  - broccoli-clext build dist --environment=test --once
   - buster-test -r xml 1> shippable/testresults/result.xml
 
   cache: true
