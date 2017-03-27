@@ -16,6 +16,7 @@ build:
   - mkdir -p shippable/testresults
 #  - broccoli-clext build dist --environment=test --once
 #  - buster-test -r xml 1> shippable/testresults/result.xml
+  - echo 'hi'
 
   cache: true
 
