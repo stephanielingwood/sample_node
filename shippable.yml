@@ -10,9 +10,9 @@ env:
   - XUNIT_FILE=shippable/testresults/result.xml
 
 build:
-  pre_ci_boot:
-    image_name: trriplejay/simpleserver
-    image_tag: latest
+ # pre_ci_boot:
+ #   image_name: trriplejay/simpleserver
+ #   image_tag: latest
   ci: 
     - node --version
     - python --version
